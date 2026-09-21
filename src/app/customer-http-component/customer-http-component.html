@@ -1,0 +1,23 @@
+<p>customer-http-component works!</p>
+<table border="1">
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Age</td>
+        <td>#</td>
+    </tr>
+    <ng-container *ngFor="let customerinfor of customertype()">
+        <tr>
+            <td colspan="5">{{customerinfor.CustomerTypeId}} - {{customerinfor.CustomterTypeName}}</td>
+        </tr>
+        <tr *ngFor="let customer of customerinfor.Customers ">
+            <td>{{customer.Id}}</td>
+            <td>{{customer.Name}}</td>
+            <td>{{customer.Email}}</td>
+            <td>{{customer.Age}}</td>
+            <img src="{{customer.Image}}" width="100" height="120">
+        </tr>
+    </ng-container>
+
+</table>
